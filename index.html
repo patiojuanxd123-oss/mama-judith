@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judith</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div id="intro" class="intro">
+    <img src="img/gatitoanimado.png" id="gato" class="gato-intro" alt="Gatito">
+    <p>Toca para entrar 🐾</p>
+</div>
+
+<div id="contenido" class="contenido oculto">
+
+    <h1 class="titulo_madre">
+        JUDITH ARCOS SUSAYA 🌻
+    </h1>
+    <button id="btnFamilia" class="btn-familia">
+        Familia 💛
+    </button>
+
+    <section class="seccion">
+        <h2>Vida ✨</h2>
+        <p>
+            Una mujer fuerte, amorosa y luchadora.
+            Cada etapa de su vida está marcada por amor,
+            esfuerzo y dedicación a su familia.
+
+            ¿QUIEN SOY?
+        </p>
+        <div class="galeria">
+            <img src="img/judith1.jpeg">
+            <img src="img/judith2.jpeg">
+            <img src="img/judith3.jpeg">
+            <img src="img/judith4.jpeg">
+            <img src="img/judith5.jpeg">
+            <img src="img/judith6.jpeg">
+        </div>
+        
+    </section>
+
+    <section class="seccion">
+        <h2> BTS 💜</h2>
+        <p> Una gran army de estos chicos.
+        </p>
+        <div class="galeria">
+            <img src="img/bts1.jpg">
+            <img src="img/bts2.jpg">
+        </div>
+    </section>
+
+</div>
+
+
+<div id="panelFamilia" class="panel-familia oculto">
+
+    <button id="cerrarFamilia" class="cerrar">✖</button>
+
+    <section class="seccion">
+        <h2>Hijos 💖</h2>
+        <div class="galeria">
+            <img src="img/daniel.jpeg">
+            <img src="img/valentino.jpeg">
+            <img src="img/Abigail .jpg">
+        </div>
+        <p>Mis mayores bendiciones.</p>
+    </section>
+
+    <section class="seccion">
+        <h2>Pareja ❤️</h2>
+        <div class="galeria">
+            <img src="img/mario.jpeg">
+        </div>
+        <p>Compañero de vida y apoyo incondicional.</p>
+    </section>
+
+    <section class="seccion">
+        <h2>Herman@s 👭</h2>
+        <div class="galeria">
+            <img src="img/yaneth.jpeg">
+            <img src="img/edinson.jpeg">
+            <img src="img/tono.jpeg">
+            <img src="img/yessenia.jpeg">
+        </div>
+        <p>Unidos por siempre.</p>
+    </section>
+
+    <section class="seccion">
+        <h2>Madre 👩‍👧</h2>
+        <div class="galeria">
+            <img src="img/herlinda.jpeg">
+        </div>
+        <p>Gracias por darme la vida, madre querida.</p>
+    </section>
+
+</div>
+
+<script>
+    const intro = document.getElementById('intro');
+    const contenido = document.getElementById('contenido');
+    const gato = document.getElementById('gato');
+
+    const btnFamilia = document.getElementById('btnFamilia');
+    const panelFamilia = document.getElementById('panelFamilia');
+    const cerrarFamilia = document.getElementById('cerrarFamilia');
+
+    // ENTRAR A LA PÁGINA
+    gato.addEventListener('click', () => {
+        intro.style.display = "none";
+        contenido.classList.remove("oculto");
+    });
+
+    // ABRIR FAMILIA
+    btnFamilia.addEventListener('click', () => {
+        panelFamilia.classList.remove("oculto");
+    });
+
+    // CERRAR FAMILIA
+    cerrarFamilia.addEventListener('click', () => {
+        panelFamilia.classList.add("oculto");
+    });
+
+    // AGRANDAR IMÁGENES
+    document.querySelectorAll('.galeria img').forEach(img => {
+        img.addEventListener('click', () => {
+            img.classList.toggle('activa');
+        });
+    });
+</script>
+
+</body>
+</html>
+
